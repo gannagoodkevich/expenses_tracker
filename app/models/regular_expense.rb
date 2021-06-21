@@ -1,7 +1,6 @@
 class RegularExpense
   include Mongoid::Document
-  include Mongoid::Timestamps::Created
-  include Mongoid::Timestamps::Updated
+  include Mongoid::Timestamps
 
   field :name, type: String
   field :description, type: String
