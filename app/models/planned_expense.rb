@@ -14,7 +14,7 @@ class PlannedExpense
   validate :date_check
 
   def date_check
-    return true if due_date >= Date.today
+    return true if due_date.present? && due_date >= Date.today
 
     errors.add(:due_date_error, "Due date can't be in the past")
     false

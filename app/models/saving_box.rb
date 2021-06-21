@@ -7,4 +7,6 @@ class SavingBox
   field :purpose, type: String
 
   belongs_to :user
+
+  validates :name, presence: true
 end
