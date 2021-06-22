@@ -27,6 +27,6 @@ class PlannedExpensesController < ApplicationController
   private
 
   def permitted_params
-    params.require(:planned_expense).permit(:name, :description, :due_date, :user_id)
+    params.require(:planned_expense).permit(:title, :description, :due_date, :user_id)
   end
 end
