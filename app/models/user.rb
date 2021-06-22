@@ -9,4 +9,13 @@ class User
   has_many :planned_expenses
   has_many :regular_expenses
   has_many :saving_boxes
+  has_one :wallet
+
+  after_create :create_wallet
+
+  protected
+
+  def create_wallet
+    Wallet.create!(user: self)
+  end
 end

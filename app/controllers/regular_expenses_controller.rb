@@ -27,6 +27,6 @@ class RegularExpensesController < ApplicationController
   private
 
   def permitted_params
-    params.require(:regular_expense).permit(:name, :description, :notification_date, :user_id)
+    params.require(:regular_expense).permit(:title, :description, :notification_date, :user_id)
   end
 end

@@ -27,6 +27,6 @@ class SavingBoxesController < ApplicationController
   private
 
   def permitted_params
-    params.require(:saving_box).permit(:name, :purpose, :user_id)
+    params.require(:saving_box).permit(:title, :purpose, :user_id)
   end
 end
