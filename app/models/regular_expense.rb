@@ -2,11 +2,11 @@ class RegularExpense
   include Mongoid::Document
   include Mongoid::Timestamps
 
+  include Expense
+
   field :title, type: String
   field :description, type: String
   field :notification_date, type: DateTime
-
-  belongs_to :user
 
   validates :name, presence: true
   validates :notification_date, presence: true

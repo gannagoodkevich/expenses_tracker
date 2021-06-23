@@ -2,11 +2,9 @@ class PlannedExpense
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  field :title, type: String
-  field :description, type: String
-  field :due_date, type: DateTime
+  include Expense
 
-  belongs_to :user
+  field :due_date, type: DateTime
 
   validates :name, presence: true
   validates :due_date, presence: true
