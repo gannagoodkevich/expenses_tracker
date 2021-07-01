@@ -8,6 +8,8 @@ module Expense
     field :title, type: String
     field :description, type: String
 
+    validates :title, presence: true
+
     belongs_to :user
   end
 end

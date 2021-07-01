@@ -8,7 +8,6 @@ class RegularExpense
   field :description, type: String
   field :notification_date, type: DateTime
 
-  validates :name, presence: true
   validates :notification_date, presence: true
   validate :date_check
 

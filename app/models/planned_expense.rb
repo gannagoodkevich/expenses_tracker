@@ -6,7 +6,6 @@ class PlannedExpense
 
   field :due_date, type: DateTime
 
-  validates :name, presence: true
   validates :due_date, presence: true
   validate :date_check
 
