@@ -21,7 +21,7 @@ RSpec.describe PlannedExpense, :type => :model do
   end
 
   it "is not valid without name attribute" do
-    exp = build(:planned_expense, :without_name)
+    exp = build(:planned_expense, :without_title)
     expect(exp).not_to be_valid
   end
 
